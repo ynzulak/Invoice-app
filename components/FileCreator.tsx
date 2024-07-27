@@ -11,22 +11,22 @@ const FileCreator = () => {
 
     return (
         <div className="file-data">
-            <div className="date">
+            <div className="date data">
                 <Date />
             </div>
-            <div className="number">
+            <div className="number data">
                 <Number />
             </div>
-            <div className="client">
+            <div className="client data">
                 <Client />
             </div>
-            <div className="workplace">
+            <div className="workplace data">
                 <Workplace />
             </div>
-            <div className="object">
+            <div className="object data">
                 <Object />
             </div>
-            <div className="price">
+            <div className="price data">
                 <Price />
             </div>
         </div>

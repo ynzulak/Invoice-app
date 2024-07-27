@@ -1,3 +1,4 @@
+"use client"
 import FileCreator from "../../components/FileCreator";
 
 import "./styles/globals.scss"
