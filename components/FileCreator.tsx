@@ -2,7 +2,7 @@ import Date from "./file data/Date"
 import Number from "./file data/Number"
 import Client from "./file data/Client"
 import Workplace from "./file data/Workplace"
-import Object from "./file data/Object"
+import Object from "./file data/Service"
 import Price from "./file data/Price"
 
 import "../src/app/styles/file-creator.scss"
