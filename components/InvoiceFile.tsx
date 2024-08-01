@@ -46,22 +46,32 @@ const InvoiceFile = () => {
             <div className="category-info">
               <p>1. Dismantling of old windows and doors.</p>
               <p>2. Installation of new windows and doors with treatment in a residential building.</p>
+              <p>2. Installation of new windows and doors with treatment in a residential building.</p>
+              <p>2. Installation of new windows and doors with treatment in a residential building.</p>
             </div>
           </div>
           <div className="price">
-            <div className="price-number"><p>1000€</p></div>
-            <div className="price-in-words"><p>(one thousand euros)</p></div>
+            <div className="price-row">
+              <div className="price-number"><p>1000€</p></div>
+              <div className="price-in-words"><p>(one thousand euros)</p></div>
+            </div>
           </div>
           <div className="bank-number">
             <div className="thanks">
-              <p>For your kind settlement,
-                THANKS
-                Please for the transfer to the Poland account:
-                JAN KOWALSKI – beneficiary
-                Bic bank
-                PL 12 345678901234567890123
-                PLBANK
-                Mr Jan KOWALSKI</p>
+              <p>For your kind settlement,</p>
+              <p>THANKS</p>
+              <p>Please for the transfer to the Poland account:</p>
+              <p>JAN KOWALSKI – beneficiary</p>
+            </div>
+            <div className="bank-account">
+              <p>PL 12 345678901234567890123</p>
+            </div>
+            <div className="bic">
+              <p>Bic bank:</p>
+              <p>PLBANK</p>
+            </div>
+            <div className="name">
+              <p>Mr Jan KOWALSKI</p>
             </div>
           </div>
         </div>
