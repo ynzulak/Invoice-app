@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useContext } from "react"
+import { DataContext } from "../DataProvider"
 
 const Number = () => {
-    const [invoiceNumber, setInvoiceNumber] = useState('')
+    const {invoiceNumber, setInvoiceNumber} = useContext(DataContext)
 
     const handleNumberChage = (e: any) => {
         setInvoiceNumber(e.target.value)

@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { DataContext } from "../DataProvider"
 
 const Client = () => {
-    const [invoiceClient, setInvoiceClient] = useState('')
+    const {invoiceClient, setInvoiceClient} = useContext(DataContext)
 
     const handleClientChage = (e: any) => {
         setInvoiceClient(e.target.value)

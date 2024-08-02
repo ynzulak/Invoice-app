@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/DataProvider.jsx", "components/file data/Date.jsx", "src/app/page.jsx", "components/FileCreator.jsx", "components/InvoiceFile.jsx"],
   "exclude": ["node_modules"]
 }

@@ -38,6 +38,9 @@
         .row {
             display: flex;
             margin-bottom: 15px;
+            .address-div{
+                width: 140px;
+            }
         }
         .category {
             flex: 0 0 170px; 

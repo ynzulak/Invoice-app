@@ -1,11 +1,22 @@
-import { useState } from "react"
+import { useContext } from "react"
+import { DataContext } from "../DataProvider"
+
+
+
 
 const Price = () => {
-    const [invoicePrice, setInvoicePrice] = useState('')
-
+      const {invoicePrice, setInvoicePrice, priceInWords, setPriceInWords} = useContext(DataContext)
     const handlePriceChage = (e: any) => {
-        setInvoicePrice(e.target.value)
+        const price = e.target.value
+        setInvoicePrice(price)
+        if (!isNaN(price) && price !== '') {
+            setPriceInWords((price));
+          } else {
+            setPriceInWords('');
+          }
+          console.log(priceInWords);
     }
+    
 
     return (
     <>

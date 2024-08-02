@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useContext } from "react"
+import { DataContext } from "../DataProvider"
 
 const Workplace = () => {
-    const [invoiceWorkplace, setInvoiceWorkplace] = useState('')
+    const {invoiceWorkplace, setInvoiceWorkplace} = useContext(DataContext)
 
     const handleWorkplaceChage = (e: any) => {
         setInvoiceWorkplace(e.target.value)
