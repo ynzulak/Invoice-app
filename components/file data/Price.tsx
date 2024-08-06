@@ -1,16 +1,16 @@
+import { toWords } from "number-to-words"
 import { useContext } from "react"
 import { DataContext } from "../DataProvider"
 
-
-
-
 const Price = () => {
       const {invoicePrice, setInvoicePrice, priceInWords, setPriceInWords} = useContext(DataContext)
+
+
     const handlePriceChage = (e: any) => {
         const price = e.target.value
         setInvoicePrice(price)
         if (!isNaN(price) && price !== '') {
-            setPriceInWords((price));
+            setPriceInWords(toWords(price));
           } else {
             setPriceInWords('');
           }

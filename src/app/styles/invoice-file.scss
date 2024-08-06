@@ -1,6 +1,7 @@
 .invoice-file{
     margin: 50px 0;
     .a4{
+        position: relative;
         display: flex;
         flex-direction: column;
         background-color: white;
@@ -47,6 +48,10 @@
             font-weight: bold;
         }
 
+        .service-list{
+            margin-left: 15px;
+        }
+
         .price {
             display: flex;
             flex-direction: column;
@@ -62,10 +67,13 @@
             }
         }
         .bank-number {
+            position: absolute;
+            bottom: 80px;
             font-size: 14px;
             font-weight: bold;
             padding: 20px 70px;
             .bank-account{
+                
                 margin-left: 100px;
             }
             .bic {

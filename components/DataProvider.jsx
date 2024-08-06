@@ -11,10 +11,12 @@ export const DataProvider = ({ children }) => {
   const [invoiceClient, setInvoiceClient] = useState('');
   const [invoiceWorkplace, setInvoiceWorkplace] = useState('');
   const [priceInWords, setPriceInWords] = useState('');
+  const [invoiceService, setInvoiceService] = useState('')
+  const [serviceList, setServiceList] = useState([])
 
 
   const value = {
-    selectedDate, setSelectedDate, invoiceNumber, setInvoiceNumber, invoicePrice, setInvoicePrice, invoiceClient, setInvoiceClient, invoiceWorkplace, setInvoiceWorkplace, priceInWords, setPriceInWords
+    selectedDate, setSelectedDate, invoiceNumber, setInvoiceNumber, invoicePrice, setInvoicePrice, invoiceClient, setInvoiceClient, invoiceWorkplace, setInvoiceWorkplace, priceInWords, setPriceInWords, invoiceService, setInvoiceService, serviceList, setServiceList
   }
 
   return (

@@ -4,7 +4,7 @@ import { DataContext } from "./DataProvider";
 
 
 const InvoiceFile = () => {
-const {selectedDate, invoiceNumber, invoicePrice, invoiceClient, invoiceWorkplace, priceInWords} = useContext(DataContext)
+const {selectedDate, invoiceNumber, invoicePrice, invoiceClient, invoiceWorkplace, priceInWords, serviceList} = useContext(DataContext)
 
   return (
     <div className="invoice-file">
@@ -36,18 +36,19 @@ const {selectedDate, invoiceNumber, invoicePrice, invoiceClient, invoiceWorkplac
             </div>
           </div>
           <div className="workplace row">
-            <div className="category"><p>Workplace :</p></div>
+            <div className="category"><p>Workplace:</p></div>
             <div className="category-info address-div">
               <p>{invoiceWorkplace}</p>
             </div>
           </div>
           <div className="service row">
-            <div className="category"><p>Service</p></div>
-            <div className="category-info">
-              <p>1. Dismantling of old windows and doors.</p>
-              <p>2. Installation of new windows and doors with treatment in a residential building.</p>
-              <p>2. Installation of new windows and doors with treatment in a residential building.</p>
-              <p>2. Installation of new windows and doors with treatment in a residential building.</p>
+            <div className="category"><p>Service:</p></div>
+            <div className="category-info service-list">
+            <ol>
+                {serviceList.map((service: string, index: number) => (
+                    <li key={index}><p>{service}</p></li>
+                ))}
+            </ol>
             </div>
           </div>
           <div className="price">
