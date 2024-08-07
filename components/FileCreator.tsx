@@ -4,13 +4,16 @@ import Client from "./file data/Client"
 import Workplace from "./file data/Workplace"
 import Object from "./file data/Service"
 import Price from "./file data/Price"
+import BusinessData from "./file data/BusinessData"
 
 import "../src/app/styles/file-creator.scss"
+import BankNumber from "./file data/BankNumber"
 
 const FileCreator = () => {
 
     return (
         <div className="file-data">
+                <BusinessData />
             <div className="date data">
                 <Date />
             </div>
@@ -29,6 +32,7 @@ const FileCreator = () => {
             <div className="price data">
                 <Price />
             </div>
+            <BankNumber />
         </div>
     )
 }

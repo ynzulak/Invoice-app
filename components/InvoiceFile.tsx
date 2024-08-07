@@ -4,18 +4,18 @@ import { DataContext } from "./DataProvider";
 
 
 const InvoiceFile = () => {
-const {selectedDate, invoiceNumber, invoicePrice, invoiceClient, invoiceWorkplace, priceInWords, serviceList} = useContext(DataContext)
+const {businessName, businessType, ceoName, businessAddress, businessPhone, nin, selectedDate, invoiceNumber, invoicePrice, invoiceClient, invoiceWorkplace, priceInWords, serviceList, bankAccount, bic} = useContext(DataContext)
 
   return (
     <div className="invoice-file">
       <div className="a4">
         <div className="business-info">
-          <p className="business-name">„ BUSINESS ”</p>
-          <p>Construction services</p>
-          <p>Mr John SMITH</p>
-          <p>00-013 Warszawa, ul. Jasna 8/10</p>
-          <p>Tel : 123456789</p>
-          <p className="siret">Siret : NIP PL 1234567890 – REGON 12345678</p>
+          <p className="business-name">„ {businessName} ”</p>
+          <p>{businessType}</p>
+          <p>{ceoName}</p>
+          <p>{businessAddress}</p>
+          <p>Tel : {businessPhone}</p>
+          <p className="siret">Nin : {nin}</p>
         </div>
         <div className="invoice-number">
           <p>INVOICE N°{invoiceNumber}</p>
@@ -62,17 +62,17 @@ const {selectedDate, invoiceNumber, invoicePrice, invoiceClient, invoiceWorkplac
               <p>For your kind settlement,</p>
               <p>THANKS</p>
               <p>Please for the transfer to the Poland account:</p>
-              <p>JAN KOWALSKI – beneficiary</p>
+              <p>{ceoName} – beneficiary</p>
             </div>
             <div className="bank-account">
-              <p>PL 12 345678901234567890123</p>
+              <p>{bankAccount}</p>
             </div>
             <div className="bic">
               <p>Bic bank:</p>
-              <p>PLBANK</p>
+              <p>{bic}</p>
             </div>
             <div className="name">
-              <p>Mr Jan KOWALSKI</p>
+              <p>{ceoName}</p>
             </div>
           </div>
         </div>
