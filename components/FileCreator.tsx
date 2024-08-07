@@ -8,11 +8,15 @@ import BusinessData from "./file data/BusinessData"
 
 import "../src/app/styles/file-creator.scss"
 import BankNumber from "./file data/BankNumber"
+import { useContext } from "react"
+import { DataContext } from "./DataProvider"
 
 const FileCreator = () => {
 
+    const {isVisible} = useContext(DataContext)
+
     return (
-        <div className="file-data">
+        <div className={`file-data ${isVisible ? 'not-visible' : ''}`}>
                 <BusinessData />
             <div className="date data">
                 <Date />

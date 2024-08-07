@@ -1,5 +1,6 @@
 .invoice-file{
-    margin: 50px 0;
+    display: none;
+    margin:  0;
     .a4{
         position: relative;
         display: flex;
@@ -89,17 +90,37 @@
     }
 }
 }
+.button-div{
+    display: none;
+}
+.visible {
+    display: block;
+  }
+  .error{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .error-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
 
-// @media (max-width: 768px) {
-//     .a4-page {
-//       width: 100%;
-//       height: auto;
-//       padding: 10mm;
-//     }
-//   }
-  
-//   @media (max-width: 480px) {
-//     .a4-page {
-//       padding: 5mm;
-//     }
-//   }
+        border-radius: 10px;
+        color: black;
+        width: 325px;
+        height: 40px;
+    }}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .download-button {
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: white;
+    }
+}

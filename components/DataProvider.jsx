@@ -21,10 +21,12 @@ export const DataProvider = ({ children }) => {
   const [serviceList, setServiceList] = useState([])
   const [bankAccount, setBankAccount] = useState('')
   const [bic, setBic ] = useState('')
+  const [isVisible, setIsVisible] = useState(false);
+  const [error, setError] = useState(false);
 
 
   const value = {
-    selectedDate, setSelectedDate, invoiceNumber, setInvoiceNumber, invoicePrice, setInvoicePrice, invoiceClient, setInvoiceClient, invoiceWorkplace, setInvoiceWorkplace, priceInWords, setPriceInWords, invoiceService, setInvoiceService, serviceList, setServiceList, businessName, setBusinessName, businessType, setBusinessType, ceoName, setCeoName, businessAddress, setBusinessAddress, businessPhone, setBusinessPhone, nin, setNin, bankAccount, setBankAccount, bic, setBic
+    selectedDate, setSelectedDate, invoiceNumber, setInvoiceNumber, invoicePrice, setInvoicePrice, invoiceClient, setInvoiceClient, invoiceWorkplace, setInvoiceWorkplace, priceInWords, setPriceInWords, invoiceService, setInvoiceService, serviceList, setServiceList, businessName, setBusinessName, businessType, setBusinessType, ceoName, setCeoName, businessAddress, setBusinessAddress, businessPhone, setBusinessPhone, nin, setNin, bankAccount, setBankAccount, bic, setBic, isVisible, setIsVisible, error, setError
   }
 
   return (
