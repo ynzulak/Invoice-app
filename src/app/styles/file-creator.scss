@@ -1,15 +1,26 @@
+.file-creator-container{
+display: flex;
+justify-content: center;
 .file-data {
     background-color: white;
     width: 100%;
+    max-width: 500px;
     padding: 10px;
     color: black;
 
     .data{
         margin: 20px 5px;
-        
     }
 }
-
+}
 .not-visible {
     display: none;
+}
+
+// Media query dla telefonów
+@media only screen and (max-width: 767px) {
+    .file-data {
+        width: 100%;
+        max-width: 100%;
+    }
 }

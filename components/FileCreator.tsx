@@ -16,27 +16,29 @@ const FileCreator = () => {
     const {isVisible} = useContext(DataContext)
 
     return (
-        <div className={`file-data ${isVisible ? 'not-visible' : ''}`}>
-                <BusinessData />
-            <div className="date data">
-                <Date />
+        <div className="file-creator-container">
+            <div className={`file-data ${isVisible ? 'not-visible' : ''}`}>
+                    <BusinessData />
+                <div className="date data">
+                    <Date />
+                </div>
+                <div className="number data">
+                    <Number />
+                </div>
+                <div className="client data">
+                    <Client />
+                </div>
+                <div className="workplace data">
+                    <Workplace />
+                </div>
+                <div className="object data">
+                    <Object />
+                </div>
+                <div className="price data">
+                    <Price />
+                </div>
+                <BankNumber />
             </div>
-            <div className="number data">
-                <Number />
-            </div>
-            <div className="client data">
-                <Client />
-            </div>
-            <div className="workplace data">
-                <Workplace />
-            </div>
-            <div className="object data">
-                <Object />
-            </div>
-            <div className="price data">
-                <Price />
-            </div>
-            <BankNumber />
         </div>
     )
 }
