@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { DataContext } from './DataProvider'
+import { motion } from 'framer-motion'
 
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
@@ -7,6 +8,7 @@ import jsPDF from 'jspdf'
 import GeneratePDF from './file data/GenerateButton'
 
 import '../src/app/styles/invoice-file.scss'
+
 
 const InvoiceFile = () => {
 	const {
@@ -48,14 +50,30 @@ const InvoiceFile = () => {
 			})
 	}
 
+	const errorVariants = {
+		hidden: { opacity: 0, y: -20 },
+		visible: { opacity: 1, y: 0 },
+	}
+
+	const resetButton = function() {
+		window.location.reload();
+	}
+
 	return (
-		<div>
+<div>
+
       {error &&(
-      <div className='error'>
-        <div className="error-message">
-            <p>{error}</p>
-            </div>
-      </div>
+		<motion.div
+		className='error'
+		initial='hidden'
+		animate='visible'
+		variants={errorVariants}>
+		<div className='error'>
+			<div className="error-message">
+				<p>{error}</p>
+				</div>
+		</div>
+		</motion.div>
             )}
 			<GeneratePDF />
 			<div className={`invoice-file ${isVisible ? 'visible' : ''}`}>
@@ -153,6 +171,9 @@ const InvoiceFile = () => {
         <div className="button">
           <button className='download-button' onClick={downloadPDF}>
             <p>Download PDF</p>
+          </button>
+          <button className='download-button reset' onClick={resetButton}>
+            <p>Reset</p>
           </button>
         </div>
       </div>
